@@ -28,34 +28,29 @@ This project uses the following databases:
 
 The analysis pipeline follows these steps:
 
-1.  Download eddy data
-2.  Download acoustic data
-3.  Overlap the two data sources to only keep acoustic data inside and
-    around eddies
-4.  Make and Export the Figures 1 and 2
-5.  Compare inside acoustic values to outside acoustic values in each
-    eddy
-6.  Make and Export the Figures 3 and 4
-7.  Compare the spatial distribution of the results with the previously
-    published results
+1.  Blabla
+2.  Blabla
+3.  Blabla
+4.  Blabla
+
 
 ## Content
 
 This repository is structured as follow:
 
-- [`data/`](https://github.com/auroreRECE/eddy_micronecton/tree/main/data):
+- [`data/`](https://github.com/auroreRECE/European_demersal_fish_assemblages/tree/main/data):
   contains a sampled of data used in the article. The folder is split in
   two folders:
-  [`data/raw/`](https://github.com/auroreRECE/eddy_micronecton/tree/main/data/raw)
+  [`data/raw/`](https://github.com/auroreRECE/European_demersal_fish_assemblages/main/data/raw)
   to find a sample of all raw data (acoustic, eddy trajectories, chloro
   and sst) ; and
-  [`data/intermediate/`](https://github.com/auroreRECE/eddy_micronecton/tree/main/data/intermediate)
+  [`data/intermediate/`](https://github.com/auroreRECE/European_demersal_fish_assemblages/tree/main/data/intermediate)
   with some intermediate .Rdata files, to make easily the Figures.
 
-- [`figures/`](https://github.com/auroreRECE/eddy_micronecton/tree/main/figures):
+- [`figures/`](https://github.com/auroreRECE/European_demersal_fish_assemblages/tree/main/figures):
   contains the figures used to validate et visualize the outputs.
 
-- [`scripts/`](https://github.com/auroreRECE/eddy_micronecton/tree/main/scripts):
+- [`scripts/`](https://github.com/auroreRECE/European_demersal_fish_assemblages/tree/main/scripts):
   contains R scripts to run the workflow. The order to run these scripts
   is explained in each name of files and follow the Workflow
   description.
@@ -64,11 +59,8 @@ This repository is structured as follow:
 
 Please use the following citation:
 
-> Receveur A, Menkes C, Lengaigne M, Ariza A, Bertrand A, Dutheil C,
-> Cravatte S, Allain A, Barbin L, Lebourges-Dhaussy A, Lehodey P, Nicol
-> S. (2024) Code for “A rare oasis effect for forage fauna in oceanic
-> eddies at the global scale.” URL:
-> <https://github.com/auroreRECE/eddy_micronecton/tree/main/>.
+> Receveur, A., Leprieur F., Ellingsen K., Keith D., Kleisner K., McLean M., Mérigot B., Mills K., Mouillot D., Rufino M., Trindade-Santos I., Van Hoey G., Albouy C., Auber A.. (2024) Code for “Long-term changes in taxonomic and functional composition of European marine fish communities.” URL:
+> <https://github.com/auroreRECE/European_demersal_fish_assemblages>.
 
 ## Contributing
 
