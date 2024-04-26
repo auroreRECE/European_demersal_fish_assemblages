@@ -1,5 +1,5 @@
 
-# European
+# European demersal fish assemblages
 
 <!-- badges: start -->
 
@@ -33,7 +33,6 @@ The analysis pipeline follows these steps:
 3.  Blabla
 4.  Blabla
 
-
 ## Content
 
 This repository is structured as follow:
@@ -59,7 +58,11 @@ This repository is structured as follow:
 
 Please use the following citation:
 
-> Receveur, A., Leprieur F., Ellingsen K., Keith D., Kleisner K., McLean M., Mérigot B., Mills K., Mouillot D., Rufino M., Trindade-Santos I., Van Hoey G., Albouy C., Auber A.. (2024) Code for “Long-term changes in taxonomic and functional composition of European marine fish communities.” URL:
+> Receveur, A., Leprieur F., Ellingsen K., Keith D., Kleisner K., McLean
+> M., Mérigot B., Mills K., Mouillot D., Rufino M., Trindade-Santos I.,
+> Van Hoey G., Albouy C., Auber A.. (2024) Code for “Long-term changes
+> in taxonomic and functional composition of European marine fish
+> communities.” URL:
 > <https://github.com/auroreRECE/European_demersal_fish_assemblages>.
 
 ## Contributing
