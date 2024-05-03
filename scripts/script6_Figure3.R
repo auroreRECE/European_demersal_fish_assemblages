@@ -58,8 +58,8 @@ df_trend_MFA <- df_trend_MFA %>% dplyr::select(-X)
 seuil_pval = 0.05
 for(rep_region in unique(df_trend_PCA$Ecoregion )){
   
-  pl1_celtic_sea_taxo <- df_pca_taxo_sm_melt[  df_pca_taxo_sm_melt$Ecoregion == rep_region &
-                                                 df_pca_taxo_sm_melt$dimension %in% c("PC1", "PC2"), ]
+  pl1_celtic_sea_taxo <- df_trend_PCA[df_trend_PCA$Ecoregion == rep_region &
+                                        df_trend_PCA$dimension %in% c("PC1", "PC2"), ]
   
   pl1_celtic_sea_taxo$facet <- "Taxonomic"
   
