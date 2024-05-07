@@ -280,5 +280,5 @@ plt2_spa <- ggplot(df_spatial,
 plt2_spa
 
 ggsave(file = 'figures/figure4_spatial.jpg', plot = plt2_spa,
-       width = 3.5,  height = 1.2, scale = 3)
+       width = 3.5,  height = 2.5, scale = 3)
 
