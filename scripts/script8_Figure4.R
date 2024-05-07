@@ -1,12 +1,12 @@
 library(scales)
 
-# library(stringr)
-# library(ggplot2)
-# library(dplyr)
-# library(rgdal)
-# library(rnaturalearth)
-# library(data.table)
-# library(ggpubr)
+library(stringr)
+library(ggplot2)
+library(dplyr)
+library(rgdal)
+library(rnaturalearth)
+library(data.table)
+library(ggh4x)
 # library(grid)
 
 as.num <- function(x) { x <- as.numeric(as.character(x))}
@@ -61,31 +61,87 @@ df_all_func <- read.csv2(file = 'data/intermediate/df_all_func.csv')
 ################### temporal evolution by bioregion  ###########################
 ################################################################################
 
+df_all <- rbind(df_all_func, df_all_taxo)
+
+df_all$Ecoregion  <- factor(df_all$Ecoregion , exclude = TRUE)
+levels(df_all$Ecoregion)
+
+df_all$variable_env <- as.factor(df_all$variable_env)
+levels(df_all$variable_env)
+
+levels(df_all$variable_env)[levels(df_all$variable_env) ==  "chloro_scale"] <- "Surface chlorophyll" 
+levels(df_all$variable_env)[levels(df_all$variable_env) ==  "curr_bottom_scale"] <- "Bottom current" 
+levels(df_all$variable_env)[levels(df_all$variable_env) ==  "mlotst_scale"] <- "Mixed layer depth" 
+levels(df_all$variable_env)[levels(df_all$variable_env) ==  "oxy_bottom_scale"] <- "Bottom oxygen" 
+levels(df_all$variable_env)[levels(df_all$variable_env) ==  "temp_bottom_scale"] <- "Bottom temperature" 
+levels(df_all$variable_env)[levels(df_all$variable_env) ==  "temp_surf_scale"] <- "Surface temperature" 
+levels(df_all$variable_env)[levels(df_all$variable_env) ==  "fishing_hours_scale"] <- "Fishing effort" 
+levels(df_all$variable_env)[levels(df_all$variable_env) ==  "depth_span_scale"] <- "Depth span" 
+levels(df_all$variable_env)[levels(df_all$variable_env) ==  "depth_scale"] <- "Depth" 
+levels(df_all$variable_env)[levels(df_all$variable_env) ==  "chloro_std_scale"] <- "Var. surf. chloro." 
+levels(df_all$variable_env)[levels(df_all$variable_env) ==  "mlotst_std_scale"] <- "Var. mixed layer depth" 
+levels(df_all$variable_env)[levels(df_all$variable_env) ==  "oxy_bottom_std_scale"] <- "Var. bottom oxy." 
+levels(df_all$variable_env)[levels(df_all$variable_env) ==  "sal_surf_scale"] <- "Surface salinity" 
+levels(df_all$variable_env)[levels(df_all$variable_env) ==  "sal_surf_std_scale"] <- "Var. surf. sal" 
+levels(df_all$variable_env)[levels(df_all$variable_env) ==  "temp_surf_std_scale"] <- "Var. surf. temp." 
+levels(df_all$variable_env)[levels(df_all$variable_env) ==  "temp_bottom_std_scale"] <- "Var. bottom temp." 
+
+
+df_all$dim <- as.factor(df_all$dim)
+levels(df_all$dim)
+levels(df_all$dim) <- c("PC1/MF1", "PC2/MF2")
+
+
+df_pval_temporel_taxo <- data.frame(df_trend_PCA) %>% 
+  dplyr::filter(dimension != 'PC3') %>% 
+  dplyr::group_by(Ecoregion, dimension) %>% 
+  dplyr::summarise(pval_tred = mean(pval)) %>% 
+  dplyr::mutate(facet = "Taxonomic", 
+                dim = dimension) %>% 
+  dplyr::select(-dimension)
+df_pval_temporel_taxo$dim <- as.factor(df_pval_temporel_taxo$dim)
+levels(df_pval_temporel_taxo$dim)
+levels(df_pval_temporel_taxo$dim) <- c("PC1/MF1", "PC2/MF2")
+
+df_pval_temporel_fonctio <- data.frame(df_trend_MFA) %>% 
+  dplyr::filter(dimension != 'MF3') %>% 
+  dplyr::group_by(Ecoregion, dimension) %>% 
+  dplyr::summarise(pval_tred = mean(pval)) %>% 
+  dplyr::mutate(facet = "Functional" , 
+                dim = dimension) %>% 
+  dplyr::select(-dimension)
+df_pval_temporel_fonctio$dim <- as.factor(df_pval_temporel_fonctio$dim)
+levels(df_pval_temporel_fonctio$dim)
+levels(df_pval_temporel_fonctio$dim) <- c("PC1/MF1", "PC2/MF2")
+
+
+df_pval_temporel_all <- rbind(df_pval_temporel_taxo, df_pval_temporel_fonctio)
+df_pval_temporel_all <- data.frame(df_pval_temporel_all)
+
+df_pval_spatial <- data.frame(expand.grid(dim = unique(df_pval_temporel_all$dim),
+                                          facet = unique(df_pval_temporel_all$facet),
+                                          Ecoregion = 'Spatial distribution'))
+df_pval_spatial$pval_tred <- 0.00002
+df_pval_temporel_all2 <- rbind(df_pval_temporel_all, df_pval_spatial)
+
+df_all2 <- merge(df_all, df_pval_temporel_all2)
+
+df_all2 <- df_all2 %>% 
+  dplyr::filter(pval_tred <= 0.05 )
+
 
 param_lineheit <- 0.6
 
-df_all2$dim_legend <-  as.factor(ifelse(df_all2$facet == "Taxonomic",
+v$dim_legend <-  as.factor(ifelse(df_all2$facet == "Taxonomic",
                                         substr(df_all2$dim, 1, 3), 
                                         substr(df_all2$dim, 5, 8) ))
-df_all3 <-  df_all2[ df_all2$dim %in% c("PC1/MF1", "PC2/MF2"), ]
-
-df_all3$dim_legend <- factor(df_all3$dim_legend ,  exclude = T,
+df_all2$dim_legend <- factor(df_all2$dim_legend ,  exclude = T,
                              levels = c(  "PC1",  "PC2", "MF1" , "MF2"))
-levels(df_all3$dim_legend)
+levels(df_all2$dim_legend)
 
-
-levels(df_all3$variable_env)[levels(df_all3$variable_env) ==  "chloro_std_scale"] <- "Var. surf. chloro." 
-levels(df_all3$variable_env)[levels(df_all3$variable_env) ==  "mlotst_std_scale"] <- "Var. mixed layer depth" 
-levels(df_all3$variable_env)[levels(df_all3$variable_env) ==  "oxy_bottom_std_scale"] <- "Var. bottom oxy." 
-levels(df_all3$variable_env)[levels(df_all3$variable_env) ==  "sal_surf_scale"] <- "Surface salinity" 
-levels(df_all3$variable_env)[levels(df_all3$variable_env) ==  "sal_surf_std_scale"] <- "Var. surf. sal" 
-levels(df_all3$variable_env)[levels(df_all3$variable_env) ==  "temp_surf_std_scale"] <- "Var. surf. temp." 
-levels(df_all3$variable_env)[levels(df_all3$variable_env) ==  "temp_bottom_std_scale"] <- "Var. bottom temp." 
-
-
-for(rep_region in unique(df_all3$Ecoregion )){
+for(rep_region in unique(df_all2$Ecoregion )){
   print(rep_region)
-  dede <-  df_all3[df_all3$Ecoregion == rep_region, ]
+  dede <-  df_all2[df_all2$Ecoregion == rep_region, ]
   
   if(dim(dede)[1] != 0){
 
@@ -177,13 +233,13 @@ theme(axis.title = element_blank(),
       plot.margin = margin(7.3,6,7,6, "cm")) 
 
 
-ggsave(file = 'figures/taxo_fonctio/figure4_all_temporel.jpg', plot = plt_all_temp,
+ggsave(file = 'figures/figure4_regions.jpg', plot = plt_all_temp,
        width = 3.5,  height = 3.2, scale = 3)
 
 
 ########
 
-df_spatial <-  df_all3[df_all3$Ecoregion == "Spatial distribution", ]
+df_spatial <-  df_all2[df_all2$Ecoregion == "Spatial distribution", ]
 df_spatial$dim <- factor(df_spatial$dim, exclude = T)
 
 df_spatial$variable_env2 <- df_spatial$variable_env
@@ -223,6 +279,6 @@ plt2_spa <- ggplot(df_spatial,
         axis.ticks.y = element_blank())
 plt2_spa
 
-ggsave(file = 'figures/figure4_all_spatial.jpg', plot = plt2_spa,
+ggsave(file = 'figures/figure4_spatial.jpg', plot = plt2_spa,
        width = 3.5,  height = 1.2, scale = 3)
 

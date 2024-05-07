@@ -1,0 +1,21 @@
+"variable_env";"Value";"std_error";"p_val";"Ecoregion";"dim";"R2";"facet"
+"oxy_bottom_std_scale";-0,0818004380155588;0,0186861018704192;0,000219664180696488;"Adriatic Sea";"dim1_m";46,284;"Taxonomic"
+"chloro_scale";0,231909562735749;0,0331434852936218;6,27631419386158e-06;"Aegean-Levantine
+Sea";"dim1_m";77,764;"Taxonomic"
+"temp_surf_scale";-0,0909879868450096;0,0146434683782238;2,02011758825191e-06;"Baltic Sea";"dim1_m";68,238;"Taxonomic"
+"temp_bottom_scale";-0,253952211480589;0,0685495646555396;0,00211880917398867;"Celtic Seas";"dim1_m";24,103;"Taxonomic"
+"mlotst_std_scale";-0,0126615849520323;0,00282179141361152;0,000202782411281477;"Ionian Sea and
+Central Med. Sea";"dim1_m";40,96;"Taxonomic"
+"chloro_scale";-0,0266830068446324;0,000902418082549342;5,57174150446038e-18;"Ionian Sea and
+Central Med. Sea";"dim2_m";-47,477;"Taxonomic"
+"temp_bottom_scale";0,183095484651273;0,00597015183931287;2,72410137797339e-18;"Ionian Sea and
+Central Med. Sea";"dim2_m";-47,477;"Taxonomic"
+"mlotst_scale";0,112490822796559;0,0140676054222306;3,98696684065552e-14;"Spatial distribution";"dim1_m";79,25;"Taxonomic"
+"oxy_bottom_scale";-0,0541810369990188;0,012944508795898;3,87232987131901e-05;"Spatial distribution";"dim1_m";79,25;"Taxonomic"
+"sal_surf_scale";-0,0864680999018625;0,0185434215892235;4,94511446353327e-06;"Spatial distribution";"dim1_m";79,25;"Taxonomic"
+"temp_bottom_std_scale";-0,116651454341902;0,0183686796765783;9,28037321073654e-10;"Spatial distribution";"dim1_m";79,25;"Taxonomic"
+"temp_surf_scale";0,288538016435393;0,0220591061603762;1,68478968936309e-30;"Spatial distribution";"dim1_m";79,25;"Taxonomic"
+"chloro_scale";-0,135609739274347;0,0165510242636648;1,07634192377457e-14;"Spatial distribution";"dim2_m";73,494;"Taxonomic"
+"depth_scale";-0,0209882352963611;0,00540099839797808;0,000128722755107263;"Spatial distribution";"dim2_m";73,494;"Taxonomic"
+"sal_surf_scale";0,264748891781592;0,0144604957303857;5,18275115433257e-49;"Spatial distribution";"dim2_m";73,494;"Taxonomic"
+"temp_surf_scale";-0,252242392921817;0,017087514735902;1,97639237020751e-36;"Spatial distribution";"dim2_m";73,494;"Taxonomic"

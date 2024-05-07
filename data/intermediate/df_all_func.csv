@@ -1,0 +1,39 @@
+"variable_env";"Value";"std_error";"p_val";"Ecoregion";"dim";"R2";"facet"
+"mlotst_scale";2,55625339058177;0,805189642433618;0,00456324556517822;"Adriatic Sea";"dim1_m";31,277;"Functional"
+"mlotst_std_scale";-2,1113690192224;0,634826414822431;0,00320960062510562;"Adriatic Sea";"dim1_m";31,277;"Functional"
+"temp_bottom_scale";2,5443910271461;0,817839201575318;0,00528587252478506;"Adriatic Sea";"dim1_m";31,277;"Functional"
+"chloro_scale";-1,02499195748613;0,335597652728057;0,00602498744330723;"Adriatic Sea";"dim2_m";50,22;"Functional"
+"chloro_std_scale";0,470966414472197;0,160396925710592;0,00788844108792796;"Adriatic Sea";"dim2_m";50,22;"Functional"
+"oxy_bottom_std_scale";0,314032663947964;0,117888767366758;0,0145278870350545;"Adriatic Sea";"dim2_m";50,22;"Functional"
+"temp_bottom_scale";7,51859420186494;1,81285462488942;0,00114682751884967;"Aegean-Levantine
+Sea";"dim1_m";63,186;"Functional"
+"temp_bottom_scale";-0,815195828391424;0,28913590346952;0,00949073504382123;"Baltic Sea";"dim1_m";29,269;"Functional"
+"oxy_bottom_scale";-0,153222455637453;0,0499240658426907;0,00526297512005838;"Baltic Sea";"dim2_m";34,708;"Functional"
+"temp_bottom_scale";0,812763168953325;0,322390318851493;0,0235074170992478;"Bay of Biscay and
+Iberian Coast";"dim1_m";29,761;"Functional"
+"oxy_bottom_scale";0,870823237987157;0,35341406155419;0,0263057028876931;"Bay of Biscay and
+Iberian Coast";"dim2_m";28,814;"Functional"
+"temp_bottom_std_scale";-0,682495625634023;0,167576065889693;0,0010000283743418;"Celtic Seas";"dim1_m";53,775;"Functional"
+"temp_bottom_scale";-0,821184064803693;0,251663696620788;0,00566405128782243;"Celtic Seas";"dim2_m";53,006;"Functional"
+"temp_surf_scale";0,909942002620755;0,411050032661371;0,0439558338336706;"Celtic Seas";"dim2_m";53,006;"Functional"
+"temp_bottom_scale";-25,3840391118545;5,76989908181326;0,000345929746104733;"Ionian Sea and
+Central Med. Sea";"dim1_m";-0,364;"Functional"
+"temp_surf_scale";2,59649669065213;0,492160089523743;5,13183041865663e-05;"Ionian Sea and
+Central Med. Sea";"dim1_m";-0,364;"Functional"
+"chloro_scale";-1,09120969970439;0,51974164256354;0,0493609741651542;"Ionian Sea and
+Central Med. Sea";"dim2_m";44,297;"Functional"
+"mlotst_scale";0,625883057255449;0,171060352772585;0,00166917086128711;"Ionian Sea and
+Central Med. Sea";"dim2_m";44,297;"Functional"
+"temp_bottom_scale";5,75498381534036;2,40386853252102;0,0271386469243103;"Ionian Sea and
+Central Med. Sea";"dim2_m";44,297;"Functional"
+"chloro_scale";-0,333379036871361;0,114916033314169;0,00403115655003469;"Spatial distribution";"dim1_m";53,45;"Functional"
+"mlotst_scale";0,22519268300233;0,0796133745351164;0,00503275256194508;"Spatial distribution";"dim1_m";53,45;"Functional"
+"oxy_bottom_std_scale";-0,270379077725193;0,0729434549010369;0,000255666603900398;"Spatial distribution";"dim1_m";53,45;"Functional"
+"sal_surf_scale";0,70581777808199;0,10296083612329;4,98830085867666e-11;"Spatial distribution";"dim1_m";53,45;"Functional"
+"temp_bottom_scale";-0,367676123274572;0,0776081268826096;3,53005522147736e-06;"Spatial distribution";"dim1_m";53,45;"Functional"
+"chloro_std_scale";0,187519327398635;0,0675263130265094;0,00587974162004466;"Spatial distribution";"dim2_m";63,597;"Functional"
+"mlotst_scale";0,466210347125358;0,0597615392048965;1,43120070066837e-13;"Spatial distribution";"dim2_m";63,597;"Functional"
+"oxy_bottom_scale";-0,242103955077837;0,0594191247733852;6,10355872691322e-05;"Spatial distribution";"dim2_m";63,597;"Functional"
+"sal_surf_scale";-0,247401227580061;0,0773862082279306;0,00155793120650512;"Spatial distribution";"dim2_m";63,597;"Functional"
+"temp_bottom_std_scale";-0,370550372693398;0,0826256952268013;1,09009527447596e-05;"Spatial distribution";"dim2_m";63,597;"Functional"
+"temp_surf_scale";0,579096227073968;0,103635001615221;5,72007439055013e-08;"Spatial distribution";"dim2_m";63,597;"Functional"

@@ -1,11 +1,8 @@
 
 # European demersal fish assemblages
 
-<!-- badges: start -->
-
 [![License:
 MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://choosealicense.com/licenses/mit/)
-<!-- badges: end -->
 
 ![](figures/figure0.jpg)
 
@@ -117,7 +114,7 @@ DATRAS-BTS, MEDITS and DCF).
 
 - Trait data: the complete traits data table is available upon request.
   It is a combination of the publicly available PANGAEA database
-  (\<<https://doi.pangaea.de/10.1594/PANGAEA.900866>), Fishbase
+  (<https://doi.pangaea.de/10.1594/PANGAEA.900866>), Fishbase
   information (<https://www.fishbase.se/search.php>), and inference
   based on the FISHLIFE project
   (<https://esajournals.onlinelibrary.wiley.com/doi/10.1002/eap.1606>).
